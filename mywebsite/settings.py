@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blog', # Gunanya untuk menyimpan file HTML sesuai folder apps masing-masing. Jadi folder templates berisi file HTML tidak diletakkan diluar mywebsite
 ]
 
 MIDDLEWARE = [

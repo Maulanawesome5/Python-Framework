@@ -17,13 +17,9 @@ from django.contrib import admin
 from django.urls import path, include
 
 from . import views # ini untuk mengakses halaman web sesuai URL
-# from blog import views as blogViews # import Django apps yang bernama 'blog'
-from about import views as aboutViews # import Django apps yang bernama 'about'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    # path('blog/', blogViews.index, name='blog'),
     path('blog/', include('blog.urls')),
-    path('about/', aboutViews.index, name='about'),
 ]
