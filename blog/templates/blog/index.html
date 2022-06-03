@@ -7,16 +7,18 @@
     <title>{{judul}} | Kelas Terbuka</title>
 </head>
 <body>
-    <h1>Baca Blog Kami..!</h1>
-    <p>Halaman Blog dipindahkan ke folder Blog oleh Mr. {{mentor}}</p>
+    <h1>Baca {{judul}} Kami..!</h1>
+    <p><b>Kontributor : {{kontributor}}</b></p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur eaque facere voluptatum quia optio facilis temporibus nam numquam! Reprehenderit ullam dicta velit, ea sed eaque fuga corrupti qui eos totam.
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur eaque facere voluptatum quia optio facilis temporibus nam numquam! Reprehenderit ullam dicta velit, ea sed eaque fuga corrupti qui eos totam.</p>
     <p>Ini halaman yang sudah saya buat</p>
-    <ol>
-        <li>Halaman <a href="/">Home</a></li>
-        <li>Halaman <a href="/blog/">Blog</a></li>
-        <ul>
-            <li><a href="/blog/cerita"></a>HalamanCerita</li>
-            <li><a href="/blog/news"></a>Halaman News</li>
-        </ul>
+    <ol> <!-- Membuat hyperlink menggunakan loop django-->
+        {# template Tags #}
+        {% for link, name in nav%}
+            <li>
+                <a href="{{link}}">{{name}}</a>
+            </li>
+        {% endfor %}
     </ol>
 </body>
 </html>

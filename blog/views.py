@@ -4,23 +4,39 @@ from django.shortcuts import render
 
 def index(request):
     context = {
-        'judul' : 'ini halaman Blog',
-        'mentor' : 'ucup'
-    }
-    return render(request, 'blog/index.html', context)
-
-def news(request):
-    context = {
-        'judul' : 'ini halaman News',
-        'mentor' : 'otong'
+        'judul' : 'Halaman Blog',
+        'kontributor' : 'ucup',
+        'nav' : [
+            ['/', 'Home'],
+            ['/blog', 'Blog'],
+            ['/blog/cerita', 'Cerita'],
+            ['/blog/news', 'News']
+        ]
     }
     return render(request, 'blog/index.html', context)
 
 def cerita(request):
     context = {
-        'judul' : 'ini halaman Cerita',
-        'mentor' : 'sandra bulog'
+        'judul' : 'Halaman Cerita',
+        'kontributor' : 'otong',
+        'nav' : [
+            ['/', 'Home'],
+            ['/blog', 'Blog'],
+            ['/blog/cerita', 'Cerita'],
+            ['/blog/news', 'News']
+        ]
     }
     return render(request, 'blog/index.html', context)
 
-
+def news(request):
+    context = {
+        'judul' : 'Halaman News',
+        'kontributor' : 'sandra bulog',
+        'nav' : [
+            ['/', 'Home'],
+            ['/blog', 'Blog'],
+            ['/blog/cerita', 'Cerita'],
+            ['/blog/news', 'News']
+        ]
+    }
+    return render(request, 'blog/index.html', context)
