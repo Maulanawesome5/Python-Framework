@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Django Tutorial | Kelas Terbuka</title>
+    <title>{{judul}}</title> <!-- Title HTML akan berubah otomatis karena views.py -->
 </head>
 <body>
     <h1>Selamat datang..!!</h1>
     <p>Halaman web ini dibuat dengan menggunakan Framework Django</p>
+    <!-- tanda '{{' '}}' merupakan sintaks Django untuk menaruh nilai variabel ke HTML -->
+    <p>Belajar web backend menggunakan Django di {{judul}}, bersama mentor yang friendly Pak {{mentor}}</p>
     <p>Ini halaman yang sudah saya buat</p>
     <ol>
         <li>Halaman <a href="/">Home</a></li>
