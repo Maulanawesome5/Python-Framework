@@ -9,7 +9,8 @@
     "html.format.templating": true,
     "python.defaultInterpreterPath": "D:\\LATIHAN PEMROGRAMAN\\PYTHON_FRAMEWORK\\Env\\Scripts\\python",
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "workbench.colorTheme": "Atom One Dark",
     // "workbench.colorTheme": "Dracula",
-    "workbench.colorTheme": "Default Dark+",
+    // "workbench.colorTheme": "Default Dark+",
     "workbench.iconTheme": "vscode-icons",
 }

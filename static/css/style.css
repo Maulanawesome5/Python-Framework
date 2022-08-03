@@ -30,3 +30,8 @@ nav a {
 nav a:hover {
     background-color: #f00;
 }
+
+.container-fluid {
+    background-image: url("/static/img/mainHeader.jpg");
+    background-position: center;
+}

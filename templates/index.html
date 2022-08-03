@@ -5,21 +5,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{judul}}</title>
+    <!-- <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.css' %}"> -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static app_css %}"> <!-- yang ini pakai variabel -->
+    <title>{{ title }}</title>
 </head>
 <body>
-    <!-- source image awalnya pakai alamat folder, diganti pakai variabel bernama banner -->
-    <img id="banner" src="{% static banner %}" alt="banner_home.png">
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/about/">About</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img style="height: 30px;" src="{% static 'img/logo.png' %}" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about/">About</a>
+                </li>
+            </ul>
+          </div>
+        </div>
     </nav>
-    <h1>{{subjudul}}</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, deserunt! Error, quis repellat numquam sit doloremque, ratione omnis, itaque totam nulla quae voluptatem neque? Odio iste repellat delectus earum quibusdam!</p>
+
+    <!-- Jumbotron -->
+    <div class="container-fluid">
+        <div class="mt-4 p-5 text-white rounded">
+            <h1>{{ heading }}</h1>
+            <p>{{ subheading }}</p>
+        </div>
+    </div>
+    <article>
+        <div class="container">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, deserunt! Error, quis repellat numquam sit doloremque, ratione omnis, itaque totam nulla quae voluptatem neque? Odio iste repellat delectus earum quibusdam!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime aperiam, recusandae doloribus, natus corporis expedita quod consectetur obcaecati praesentium, perspiciatis vero. Deleniti eveniet, dolorem molestiae dolores maiores unde ullam modi!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate atque quos voluptates neque asperiores incidunt quam maiores, nostrum repellendus sequi, eveniet id? Molestias aliquam quam dolorum quaerat, eos hic! Iste?</p>
+        </div>
+    </article>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    
+    <!-- tidak berguna / error karena bootstrap sudah banyak update versi -->
+    <!-- <script src="{% static 'vendor/bootstrap/bootstrap.js' %}"></script> -->
+    <!-- <script src="{% static 'vendor/jquery/jquery.js' %}"></script> -->
+    <!-- <script src="{% static 'vendor/popper/popper.js' %}"></script> -->
 </body>
 </html>
