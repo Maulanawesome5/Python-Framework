@@ -6,16 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{judul}}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static app_css %}"> <!-- yang ini pakai variabel -->
 </head>
 <body>
     <!-- source image awalnya pakai alamat folder, diganti pakai variabel bernama banner -->
-    <img style="width: 100%;" src="{% static banner %}" alt="banner_home.png">
+    <img id="banner" src="{% static banner %}" alt="banner_home.png">
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/about/">About</a></li>
+        </ul>
+    </nav>
     <h1>{{subjudul}}</h1>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, deserunt! Error, quis repellat numquam sit doloremque, ratione omnis, itaque totam nulla quae voluptatem neque? Odio iste repellat delectus earum quibusdam!</p>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/blog/">Blog</a></li>
-        <li><a href="/about/">About</a></li>
-    </ul>
 </body>
 </html>

@@ -6,6 +6,7 @@ def index(request):
         'judul' : 'Blog',
         'subjudul' : 'Ini adalah Blog Kelas Terbuka',
         'banner' : 'blog/img/banner_blog.png',
+        'app_css' : 'blog/css/style.css',
     }
     return render(request, 'index.html', context)
     # pass
