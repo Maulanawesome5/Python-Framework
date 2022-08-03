@@ -5,6 +5,7 @@ def index(request):
     context = {
         'judul' : 'Blog',
         'subjudul' : 'Ini adalah Blog Kelas Terbuka',
+        'banner' : 'blog/img/banner_blog.png',
     }
-    return render(request, 'blog/index.html', context)
+    return render(request, 'index.html', context)
     # pass

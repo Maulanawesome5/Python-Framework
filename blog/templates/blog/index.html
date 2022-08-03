@@ -8,7 +8,8 @@
     <title>{{ judul }}</title>
 </head>
 <body>
-    <img style="width: 100%;" src="{% static 'blog/img/banner_blog.png' %}" alt="banner_blog.png">
+    <!-- alamat image banner memakai variabel key dari tipe data dictionary, views.py -->
+    <img style="width: 100%;" src="{% static banner %}" alt="banner_blog.png">
     <h1>{{subjudul}}</h1>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi incidunt porro optio itaque dicta. Illum nisi illo atque doloremque, architecto ex vero magnam, asperiores magni tenetur libero placeat nihil numquam!</p>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi incidunt porro optio itaque dicta. Illum nisi illo atque doloremque, architecto ex vero magnam, asperiores magni tenetur libero placeat nihil numquam!</p>
